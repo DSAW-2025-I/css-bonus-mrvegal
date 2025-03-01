@@ -1,0 +1,147 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px; /* Aumentado el espacio entre las figuras */
+    flex-wrap: wrap;
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.box1 {
+    background-color: #6592CF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transform: translateX(150px); 
+}
+
+.ladder {
+    width: 66px;
+    height: 132px;
+    background-color: transparent;
+    border-left: 18px solid #060F55;
+    border-right: 18px solid #060F55;
+    position: absolute;
+    transform: translateY(33px)
+}
+
+.ladder::before,
+.ladder::after {
+    content: "";
+    width: 18px; 
+    height: 18px; 
+    background-color: #060F55;
+    position: absolute;
+    top: -9px; 
+    border-radius: 50%; 
+}
+
+.ladder::before { left: -18px; }
+.ladder::after { right: -17.5px; }
+
+.ladder div {
+    width: 100%;
+    height: 13px;
+    background-color: #060F55;
+    position: absolute;
+}
+
+.ladder div:nth-child(1) { top: 16%; }
+.ladder div:nth-child(2) { top: 46%; }
+.ladder div:nth-child(3) { top: 76%; }
+
+.star {
+    width: 200px;
+    height: 200px;
+    background-color: #F5D6B4; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transform: translateX(-110px);
+}
+
+.star::before,
+.star::after {
+    content: "";
+    position: absolute;
+    background-color: #D86F45;
+}
+
+.star::before {
+    width: 64%;
+    height: 16%;
+    top: 42%;
+    left: 18%;
+}
+
+.star::after {
+    width: 16%;
+    height: 64%;
+    top: 18%;
+    left: 42%;
+}
+
+.star div {
+    position: absolute;
+    width: 40%;
+    height: 40%;
+    background-color: #D86F45;
+}
+
+.box4 {
+    background-color: #AC474B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transform: translateX(-120px);
+}
+
+.gift {
+    width: 90px;
+    height: 90px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 5px;
+}
+
+.gift div {
+    background-color: #FFFFFF;
+    width: 100%;
+    height: 100%;
+}
+
+.knot {
+    position: absolute;
+    top: 30px;
+    display: flex;
+    gap: 4px;
+}
+
+.knot div {
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+}
